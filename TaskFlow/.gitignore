@@ -1,0 +1,32 @@
+# Build output
+bin/
+obj/
+/global.json
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDEs
+.vs/
+.idea/
+*.sln.iml
+
+# Rider logs
+*.ipr
+*.iws
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets/configs
+appsettings.*.json
+!appsettings.json 
+/global.json
+
+# Test results
+TestResults/
