@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TaskFlow.Domain.Entities;
 
 namespace TaskFlow.Domain.Interfaces;
@@ -5,11 +6,11 @@ namespace TaskFlow.Domain.Interfaces;
 
 public interface IApplicationDbContext
 {
-    IQueryable<User> Users { get; }
-    IQueryable<Project> Projects { get; }
-    IQueryable<TaskItem> Tasks { get; }
-    IQueryable<Team> Teams { get; }
-    IQueryable<TeamMember> TeamMembers { get; }
+    DbSet<User> Users { get; }
+    DbSet<Project> Projects { get; }
+    DbSet<TaskItem> Tasks { get; }
+    DbSet<Team> Teams { get; }
+    DbSet<TeamMember> TeamMembers { get; }
     
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
